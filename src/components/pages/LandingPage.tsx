@@ -17,9 +17,9 @@ const LandingPage = () => {
   const { theme } = useTheme();
   return (
     <div className="lg:px-[150px] lg:pt-[100px] md:px-[50px] md:pt-[100px] pt-[50px] px-[10px] pb-[150px]">
-      <div className="w-full flex relative gap-[50px] min-h-screen">
+      <div className="w-full flex lg:flex-row flex-col  relative gap-[50px] min-h-screen">
         {/* Sidebar (Sticky Profile Section) */}
-        <div className="min-w-[400px] max-w-[400px] sticky top-[50px] h-full flex flex-col gap-[10px] items-center">
+        <div className="lg:min-w-[400px] w-full max-w-[400px] lg:sticky static top-[50px] h-full flex flex-col gap-[10px] items-center">
           <Avatar className="w-[250px] h-[250px] shadow-2xl">
             <BorderBeam borderWidth={3} size={400} />
             <AvatarImage src="https://avatars.githubusercontent.com/u/170425125?v=4" />
@@ -38,7 +38,7 @@ const LandingPage = () => {
           <div className="my-[30px]">
             <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
             <div>
-              <div className="flex justify-between items-center">
+              <div className="lg:flex lg:flex-row flex-col justify-between items-center">
                 <div className="flex gap-[10px] py-[20px]">
                   <Avatar className="w-[50px] h-[50px]">
                     <AvatarImage src="https://avatars.githubusercontent.com/u/170425125?v=4" />
@@ -64,7 +64,7 @@ const LandingPage = () => {
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Education</h2>
             <div>
-              <div className="flex justify-between items-center">
+              <div className="lg:flex justify-between items-center">
                 <div className="flex gap-[10px] py-[20px]">
                   <Avatar className="w-[50px] h-[50px]">
                     <AvatarImage src="https://avatars.githubusercontent.com/u/170425125?v=4" />
@@ -104,7 +104,7 @@ const LandingPage = () => {
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Check out my latest Projects</h2>
             <div className="my-[20px] py-[20px]">
-              <div className={"grid grid-cols-2 gap-[20px]"}>
+              <div className={"grid lg:grid-cols-2 grid-cols-1 gap-[20px]"}>
                 <MagicCard className="cursor-pointer flex-col items-center justify-center   p-[10px]  " gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}>
                   <div className="bg-red-200 rounded-md overflow-hidden ">
                     <Image src={"/img.png"} alt="" width={200} height={200} className="w-full" />
